@@ -39,6 +39,11 @@
 
 header {
     background-color: var(--primary-color);
+    height: 3rem;
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    z-index: 2;
 }
 
 
@@ -65,7 +70,7 @@ header nav ul li a:hover {
 }
 
 footer {
-    height: 200px;
+    height: 150px;
     width: 100vw;
     background-color: var(--tertiary-color);
 }
@@ -74,7 +79,6 @@ footer {
     background-color: var(--primary-color);
     height: 100vh;
     width: 100vw;
-    position: fixed;
 }
 
 .brand {
@@ -90,13 +94,23 @@ footer {
     box-shadow: inset 0px 0px 30px -7px var(--shadow-primary-color);
     -webkit-box-shadow:inset 0px 0px 30px -7px var(--shadow-primary-color);
     -moz-box-shadow: inset 0px 0px 30px -7px var(--shadow-primary-color);    
-
     z-index: 1;
+
+    transition: all 400ms ease-out 30ms;
 
     animation: logoFadeIn ease 1.3s;
     animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 }
+
+.brand:hover {
+    background-color: var(--primary-color);
+}
+
+.brand:hover h2 {
+    color: var(--secondary-color);
+}
+
 
 .brand-content {
     position: relative;
@@ -141,3 +155,7 @@ footer {
     transition: color 300ms ease-in;
 }
 
+#cv {
+    height: 300px;
+    background-color: var(--secondary-color);
+}
